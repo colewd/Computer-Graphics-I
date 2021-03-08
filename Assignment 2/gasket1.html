@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+	<head id="the_head">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+		<title>2D Sierpinski Gasket</title>
+
+		<script type="text/javascript" src="C:\Users\Cole\Desktop\Graphics\webgl-utils.js"></script>
+		<script type="text/javascript" src="C:\Users\Cole\Desktop\Graphics\initShaders.js"></script>
+		<script type="text/javascript" src="C:\Users\Cole\Desktop\Graphics\MV.js"></script>
+		<script type="text/javascript" src="C:\Users\Cole\Desktop\Graphics\Assignment 2\gasket1.js"></script>
+	</head>
+
+	<body>
+		<canvas id="gl-canvas" width="512" height="512">
+		Oops ... your browser doesn't support the HTML5 canvas element
+		</canvas>
+
+		<div id="slider_div">
+    			<p>Number of Points: </p>
+    			5000<input type="range" min="5000" max="15000" value="5000" id="point_slider" onclick="call_update(slider_update)">15000
+		</div>
+
+		<div id="color_picker_div">
+    			<p>Color Picker: </p>
+    			<input type="color" id="color_picker" value="#ff0000" onclick="call_update(color_update)">
+		</div>
+
+		<div id="button_div">
+    			<button type="button" onclick="call_update(my_display)">Display</button>
+    			<button type="button" onclick="call_update(my_animate)">Animate</button>
+    			<button type="button" onclick="call_update(my_reset)">Reset</button>
+		</div>
+
+		<div id="status_div">
+    			<p>Status: </p>
+    			<p id="current_status"></p>
+		</div>
+
+	</body>
+</html>
